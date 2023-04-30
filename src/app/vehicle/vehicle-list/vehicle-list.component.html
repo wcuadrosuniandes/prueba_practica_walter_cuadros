@@ -1,0 +1,24 @@
+<div class="col-12 col-sm-8 mt-3">
+  <table class="table">
+    <thead >
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Marca</th>
+        <th scope="col">Línea</th>
+        <th scope="col">Modelo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let vehicle of allVehicles">
+        <th scope="row">{{vehicle.id}}</th>
+        <td>{{vehicle.marca}}</td>
+        <td>{{vehicle.linea}}</td>
+        <td>{{vehicle.modelo}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div *ngFor="let item of countVehicles | keyvalue">
+  Total {{item.key}}: {{item.value}}
+</div>
